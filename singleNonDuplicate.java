@@ -5,7 +5,7 @@ public class Solution
 
   public int singleNonDuplicate(int[] nums) 
   {
-
+          //if nums has even elements, either all are in pairs or 2 non duplicates exist. so return error code.
           if(nums.length % 2 == 0)
               return -1;
 
@@ -15,6 +15,7 @@ public class Solution
                   return nums[i];
           }
 
+          //if all but last elements are in pair - that means last one is non duplicate. Return that.
           return nums[nums.length-1];
   }
 }
