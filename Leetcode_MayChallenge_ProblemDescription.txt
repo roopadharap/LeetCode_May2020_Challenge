@@ -1,0 +1,387 @@
+1. First Bad Version </br>
+You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. 
+Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
+You are given an API bool isBadVersion(version) which will return whether version is bad. Implement a function to find the first bad version. 
+You should minimize the number of calls to the API.
+Example:
+Given n = 5, and version = 4 is the first bad version.
+call isBadVersion(3) -> false
+call isBadVersion(5) -> true
+call isBadVersion(4) -> true
+Then 4 is the first bad version. 
+</br>
+
+2. Jewels and Stones  </br>
+You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  
+You want to know how many of the stones you have are also jewels.
+The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+Example 1:
+Input: J = "aA", S = "aAAbbbb"
+Output: 3
+</br>
+
+3. Ransom Note </br>
+Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false.
+Each letter in the magazine string can only be used once in your ransom note.
+Example 1:
+Input: ransomNote = "a", magazine = "b"
+Output: false
+Input: ransomNote = "aa", magazine = "aab"
+Output: true
+</br>
+
+4. Number Complement  </br>
+Given a positive integer num, output its complement number. The complement strategy is to flip the bits of its binary representation.
+Input: num = 5
+Output: 2
+Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+</br>
+
+5. First Unique Character in a String  </br>
+Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1. 
+s = "leetcode"
+return 0.
+s = "loveleetcode",
+return 2.
+You may assume the string contain only lowercase letters. 
+</br>
+
+6. Majority Element </br>
+Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+You may assume that the array is non-empty and the majority element always exist in the array.
+Input: [2,2,1,1,1,2,2]
+Output: 2
+</br>
+
+7. Cousins in Binary Tree  </br>
+In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k+1.
+Two nodes of a binary tree are cousins if they have the same depth, but have different parents.
+We are given the root of a binary tree with unique values, and the values x and y of two different nodes in the tree.
+Return true if and only if the nodes corresponding to the values x and y are cousins.
+Input: root = [1,2,3,4], x = 4, y = 3
+</br>
+
+8. Check If It Is a Straight Line </br>
+You are given an array coordinates, coordinates[i] = [x, y], where [x, y] represents the coordinate of a point. 
+Check if these points make a straight line in the XY plane.
+Input: coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
+Output: true
+</br>
+
+9. Valid Perfect Square </br>
+Given a positive integer num, write a function which returns True if num is a perfect square else False.
+Follow up: Do not use any built-in library function such as sqrt.
+Constraints: 1 <= num <= 2^31 - 1
+Input: num = 14
+Output: false
+</br>
+
+10. Find the Town Judge  </br>
+In a town, there are N people labelled from 1 to N.  There is a rumor that one of these people is secretly the town judge.
+If the town judge exists, then:
+    The town judge trusts nobody.
+    Everybody (except for the town judge) trusts the town judge.
+    There is exactly one person that satisfies properties 1 and 2.
+You are given trust, an array of pairs trust[i] = [a, b] representing that the person labelled a trusts the person labelled b.
+If the town judge exists and can be identified, return the label of the town judge.  Otherwise, return -1.
+Input: N = 3, trust = [[1,3],[2,3]]
+Output: 3
+</br>
+
+11. Flood Fill  </br>
+An image is represented by a 2-D array of integers, each integer representing the pixel value of the image (from 0 to 65535).
+Given a coordinate (sr, sc) representing the starting pixel (row and column) of the flood fill, and a pixel value newColor, "flood fill" the image.
+To perform a "flood fill", consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, 
+plus any pixels connected 4-directionally to those pixels (also with the same color as the starting pixel), and so on. 
+Replace the color of all of the aforementioned pixels with the newColor.
+At the end, return the modified image.
+
+Example 1:
+Input: 
+image = [[1,1,1],[1,1,0],[1,0,1]]
+sr = 1, sc = 1, newColor = 2
+Output: [[2,2,2],[2,2,0],[2,0,1]]
+Explanation: 
+From the center of the image (with position (sr, sc) = (1, 1)), all pixels connected 
+by a path of the same color as the starting pixel are colored with the new color.
+Note the bottom corner is not colored 2, because it is not 4-directionally connected
+to the starting pixel.
+     The length of image and image[0] will be in the range [1, 50].
+The given starting pixel will satisfy 0 <= sr < image.length and 0 <= sc < image[0].length.
+The value of each color in image[i][j] and newColor will be an integer in [0, 65535].
+</br>
+
+12. Single Element in a Sorted Array </br>
+You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once. 
+Find this single element that appears only once.
+Follow up: Your solution should run in O(log n) time and O(1) space.
+Input: nums = [1,1,2,3,3,4,4,8,8]
+Output: 2
+</br>
+
+13. Remove K Digits  </br>
+Given a non-negative integer num represented as a string, remove k digits from the number so that the new number is the smallest possible.
+Note:
+    The length of num is less than 10002 and will be ≥ k.
+    The given num does not contain any leading zero.
+Example 1:
+
+Input: num = "1432219", k = 3
+Output: "1219"
+Explanation: Remove the three digits 4, 3, and 2 to form the new number 1219 which is the smallest
+</br>
+
+14. Implement Trie (Prefix Tree) </br>
+    Implement a trie with insert, search, and startsWith methods.
+ 
+  Your Trie object will be instantiated and called as such:
+  Trie obj = new Trie();
+  obj.insert(word);
+  boolean param_2 = obj.search(word);
+  boolean param_3 = obj.startsWith(prefix);
+
+Example: 
+trie.insert("apple");
+trie.search("apple");   // returns true
+trie.search("app");     // returns false
+trie.startsWith("app"); // returns true
+trie.insert("app");   
+trie.search("app");     // returns true
+</br>
+
+15. Maximum Sum Circular Subarray </br>
+Given a circular array C of integers represented by A, find the maximum possible sum of a non-empty subarray of C.
+Here, a circular array means the end of the array connects to the beginning of the array.  
+(Formally, C[i] = A[i] when 0 <= i < A.length, and C[i+A.length] = C[i] when i >= 0.)
+Also, a subarray may only include each element of the fixed buffer A at most once.  (
+Formally, for a subarray C[i], C[i+1], ..., C[j], there does not exist i <= k1, k2 <= j with k1 % A.length = k2 % A.length.)
+
+Input: [5,-3,5]
+Output: 10
+Explanation: Subarray [5,5] has maximum sum 5 + 5 = 10
+</br>
+
+16. Odd Even Linked List  </br>
+Given a singly linked list, group all odd nodes together followed by the even nodes. 
+Please note here we are talking about the node number and not the value in the nodes.
+You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.
+Input: 2->1->3->5->6->4->7->NULL
+Output: 2->3->6->7->1->5->4->NULL
+</br>
+
+17. Find All Anagrams in a String </br>
+Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+The order of output does not matter.
+
+Input:
+s: "cbaebabacd" p: "abc"
+Output:
+[0, 6]
+Explanation:
+The substring with start index = 0 is "cba", which is an anagram of "abc".
+The substring with start index = 6 is "bac", which is an anagram of "abc". 
+</br>
+
+18. Permutation in String  </br>
+Given two strings s1 and s2, write a function to return true if s2 contains the permutation of s1. In other words, one of the first string's permutations is the substring of the second string.
+Example 1:
+Input: s1 = "ab" s2 = "eidbaooo"
+Output: True
+Explanation: s2 contains one permutation of s1 ("ba").
+
+Example 2:
+Input:s1= "ab" s2 = "eidboaoo"
+Output: False
+</br>
+
+19. Online Stock Span </br>
+Write a class StockSpanner which collects daily price quotes for some stock, and returns the span of that stock's price for the current day.
+The span of the stock's price today is defined as the maximum number of consecutive days 
+(starting from today and going backwards) for which the price of the stock was less than or equal to today's price.
+For example, if the price of a stock over the next 7 days were [100, 80, 60, 70, 60, 75, 85], 
+then the stock spans would be [1, 1, 1, 2, 1, 4, 6].
+Input: ["StockSpanner","next","next","next","next","next","next","next"], [[],[100],[80],[60],[70],[60],[75],[85]]
+Output: [null,1,1,1,2,1,4,6]
+Explanation: 
+First, S = StockSpanner() is initialized.  Then:
+S.next(100) is called and returns 1,
+S.next(80) is called and returns 1,
+S.next(60) is called and returns 1,
+S.next(70) is called and returns 2,
+S.next(60) is called and returns 1,
+S.next(75) is called and returns 4,
+S.next(85) is called and returns 6.
+
+Note that (for example) S.next(75) returned 4, because the last 4 prices
+(including today's price of 75) were less than or equal to today's price.
+
+Note:
+
+    Calls to StockSpanner.next(int price) will have 1 <= price <= 10^5.
+    There will be at most 10000 calls to StockSpanner.next per test case.
+    There will be at most 150000 calls to StockSpanner.next across all test cases.
+</br>
+
+20. Kth Smallest Element in a BST </br>
+Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+Input: root = [3,1,4,null,2], k = 1  Output: 1
+Input: root = [5,3,6,2,4,null,null,1], k = 3  Output: 3
+Follow up:
+What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently? How would you optimize the kthSmallest routine?
+Constraints:
+    The number of elements of the BST is between 1 to 10^4.
+    You may assume k is always valid, 1 ≤ k ≤ BST's total elements
+</br>
+
+21. Count Square Submatrices with All Ones </br>
+Given a m * n matrix of ones and zeros, return how many square submatrices have all ones.
+Input: matrix =
+[
+  [0,1,1,1],
+  [1,1,1,1],
+  [0,1,1,1]
+]
+Output: 15
+Explanation: 
+There are 10 squares of side 1.
+There are 4 squares of side 2.
+There is  1 square of side 3.
+Total number of squares = 10 + 4 + 1 = 15.
+</br>
+
+22. Sort Characters By Frequency  </br>
+Given a string, sort it in decreasing order based on the frequency of characters.
+
+Example 1:
+Input: "tree"  Output: "eert"
+Explanation:
+'e' appears twice while 'r' and 't' both appear once.
+So 'e' must appear before both 'r' and 't'. Therefore "eetr" is also a valid answer.
+</br>
+
+23. Interval List Intersections </br>
+Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.
+Return the intersection of these two interval lists.
+(Formally, a closed interval [a, b] (with a <= b) denotes the set of real numbers x with a <= x <= b.  
+The intersection of two closed intervals is a set of real numbers that is either empty, or can be represented as a closed interval.  
+For example, the intersection of [1, 3] and [2, 4] is [2, 3].)
+Input: A = [[0,2],[5,10],[13,23],[24,25]], B = [[1,5],[8,12],[15,24],[25,26]]
+Output: [[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]
+Note:
+
+    0 <= A.length < 1000
+    0 <= B.length < 1000
+    0 <= A[i].start, A[i].end, B[i].start, B[i].end < 10^9
+</br>
+
+24. Construct Binary Search Tree from Preorder Traversal </br>
+Return the root node of a binary search tree that matches the given preorder traversal.
+(Recall that a binary search tree is a binary tree where for every node, any descendant of node.left has a value < node.val, 
+and any descendant of node.right has a value > node.val.  Also recall that a preorder traversal displays the value of the node first, 
+then traverses node.left, then traverses node.right.)
+It's guaranteed that for the given test cases there is always possible to find a binary search tree with the given requirements.
+Example 1:
+Input: [8,5,1,7,10,12]
+Output: [8,5,10,1,7,null,12]
+</br>
+
+25. Uncrossed Lines </br>
+We write the integers of A and B (in the order they are given) on two separate horizontal lines.
+Now, we may draw connecting lines: a straight line connecting two numbers A[i] and B[j] such that:
+    A[i] == B[j];
+    The line we draw does not intersect any other connecting (non-horizontal) line.
+Note that a connecting lines cannot intersect even at the endpoints: each number can only belong to one connecting line.
+Return the maximum number of connecting lines we can draw in this way.
+
+Input: A = [1,4,2], B = [1,2,4]
+Output: 2
+Explanation: We can draw 2 uncrossed lines as in the diagram.
+We cannot draw 3 uncrossed lines, because the line from A[1]=4 to B[2]=4 will intersect the line from A[2]=2 to B[1]=2. 
+</br>
+
+26. Contiguous Array </br>
+Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1. 
+The length of the given binary array will not exceed 50,000. 
+Input: [0,1]
+Output: 2
+Explanation: [0, 1] is the longest contiguous subarray with equal number of 0 and 1.
+Input: [0,1,0]
+Output: 2
+Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1.
+</br>
+
+27. Possible Bipartition </br>
+Given a set of N people (numbered 1, 2, ..., N), we would like to split everyone into two groups of any size.
+Each person may dislike some other people, and they should not go into the same group. 
+Formally, if dislikes[i] = [a, b], it means it is not allowed to put the people numbered a and b into the same group.
+Return true if and only if it is possible to split everyone into two groups in this way.
+
+Input: N = 4, dislikes = [[1,2],[1,3],[2,4]]
+Output: true
+Explanation: group1 [1,4], group2 [2,3]
+</br>
+
+28. Counting Bits </br>
+Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1's in their binary representation and return them as an array.
+Example 1: Input: 2 Output: [0,1,1]
+if we look at bit pattern of each number, if we use & operator, it count only the common 1s. Adding 1 to the result will give desired count
+example: 6 = 110, 7 = 111, 8 = 1000
+for arr[7] => 111 & 110 = 2 ones => + 1 = 3
+for arr[8] => 1000 & 111 = 0 ones => + 1 = 1
+</br>
+
+29. Course Schedule  </br>
+There are a total of numCourses courses you have to take, labeled from 0 to numCourses-1.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
+Output: false
+Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should
+             also have finished course 1. So it is impossible.
+</br>
+
+30. K Closest Points to Origin  </br>
+We have a list of points on the plane.  Find the K closest points to the origin (0, 0).
+(Here, the distance between two points on a plane is the Euclidean distance.)
+You may return the answer in any order.  The answer is guaranteed to be unique (except for the order that it is in.)
+Input: points = [[1,3],[-2,2]], K = 1
+Output: [[-2,2]]
+Explanation: 
+The distance between (1, 3) and the origin is sqrt(10).
+The distance between (-2, 2) and the origin is sqrt(8).
+Since sqrt(8) < sqrt(10), (-2, 2) is closer to the origin.
+We only want the closest K = 1 points from the origin, so the answer is just [[-2,2]].
+
+Input: points = [[3,3],[5,-1],[-2,4]], K = 2
+Output: [[3,3],[-2,4]]
+(The answer [[-2,4],[3,3]] would also be accepted.)
+</br>
+
+31. Edit Distance  </br>
+Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+You have the following 3 operations permitted on a word:
+    Insert a character
+    Delete a character
+    Replace a character
+
+Example 1:
+Input: word1 = "horse", word2 = "ros"
+Output: 3
+Explanation: 
+horse -> rorse (replace 'h' with 'r')
+rorse -> rose (remove 'r')
+rose -> ros (remove 'e')
+
+Example 2:
+Input: word1 = "intention", word2 = "execution"
+Output: 5
+Explanation: 
+intention -> inention (remove 't')
+inention -> enention (replace 'i' with 'e')
+enention -> exention (replace 'n' with 'x')
+exention -> exection (replace 'n' with 'c')
+exection -> execution (insert 'u')
+</br>
+
